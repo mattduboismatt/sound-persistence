@@ -22,4 +22,13 @@ class Directory
     @users.sort_by!{|u| u.last_name}.reverse!
   end
 
+  def render
+    rendering = ""
+    @users.each do |u|
+      rendering << u.render
+      rendering << "\n" unless @users.last == u
+    end
+    rendering
+  end
+
 end

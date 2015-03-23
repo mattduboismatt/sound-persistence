@@ -73,4 +73,12 @@ describe Directory do
     end
   end
 
+  describe '#render' do
+    it 'renders each user object' do
+      expect(directory_with_users.render).to start_with(user1.render)
+      expect(directory_with_users.render).to include(user2.render)
+      expect(directory_with_users.render).to end_with(user3.render)
+    end
+  end
+
 end
