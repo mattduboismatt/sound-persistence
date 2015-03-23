@@ -10,15 +10,16 @@ class Directory
     @users << user
   end
 
-  def sort_by_gender
-    @users.sort_by{ |u| [u.gender, u.last_name] }
+  def sort_by_gender!
+    @users.sort_by!{ |u| [u.gender, u.last_name] }
   end
 
-  def sort_by_date_of_birth
-    @users.sort_by{ |u| u.date_of_birth}
+  def sort_by_date_of_birth!
+    @users.sort_by!{ |u| u.date_of_birth}
   end
 
-  def sort_by_last_name
-    @users.sort_by{|u| u.last_name}.reverse
+  def sort_by_last_name!
+    @users.sort_by!{|u| u.last_name}.reverse!
   end
+
 end
