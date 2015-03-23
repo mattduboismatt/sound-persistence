@@ -9,7 +9,7 @@ describe Directory do
     last_name: 'Aaa',
     gender: 'Male',
     favorite_color: 'Red',
-    date_of_birth: Date.new(2001-01-01)
+    date_of_birth: Date.parse('2001-01-01')
   }) }
 
   let(:user2) { User.new({
@@ -17,7 +17,7 @@ describe Directory do
     last_name: 'Bbb',
     gender: 'Female',
     favorite_color: 'Red',
-    date_of_birth: Date.new(2000-01-01)
+    date_of_birth: Date.parse('2000-01-01')
   }) }
 
   let(:user3) { User.new({
@@ -25,7 +25,7 @@ describe Directory do
     last_name: 'Ccc',
     gender: 'Female',
     favorite_color: 'Red',
-    date_of_birth: Date.new(2002-01-01)
+    date_of_birth: Date.parse('2002-01-01')
   }) }
 
   let(:directory_with_users) { Directory.new([user1,user2,user3]) }
