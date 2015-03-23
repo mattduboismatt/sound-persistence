@@ -46,27 +46,30 @@ describe Directory do
     end
   end
 
-  describe '#sort_by_gender' do
-    it 'sorts by gender (f then m), then by last name ascending' do
-      expect(directory_with_users.sort_by_gender[0]).to eq user2
-      expect(directory_with_users.sort_by_gender[1]).to eq user3
-      expect(directory_with_users.sort_by_gender[2]).to eq user1
+  describe '#sort_by_gender!' do
+    it 'sorts users by gender (f then m), then by last name ascending' do
+      directory_with_users.sort_by_gender!
+      expect(directory_with_users.users[0]).to eq user2
+      expect(directory_with_users.users[1]).to eq user3
+      expect(directory_with_users.users[2]).to eq user1
     end
   end
 
-  describe '#sort_by_date_of_birth' do
-    it 'sorts by date of birth' do
-      expect(directory_with_users.sort_by_date_of_birth[0]).to eq user2
-      expect(directory_with_users.sort_by_date_of_birth[1]).to eq user1
-      expect(directory_with_users.sort_by_date_of_birth[2]).to eq user3
+  describe '#sort_by_date_of_birth!' do
+    it 'sorts users by date of birth' do
+      directory_with_users.sort_by_date_of_birth!
+      expect(directory_with_users.users[0]).to eq user2
+      expect(directory_with_users.users[1]).to eq user1
+      expect(directory_with_users.users[2]).to eq user3
     end
   end
 
-  describe '#sort_by_last_name' do
-    it 'sorts by last name descending' do
-      expect(directory_with_users.sort_by_last_name[0]).to eq user3
-      expect(directory_with_users.sort_by_last_name[1]).to eq user2
-      expect(directory_with_users.sort_by_last_name[2]).to eq user1
+  describe '#sort_by_last_name!' do
+    it 'sorts users by last name descending' do
+      directory_with_users.sort_by_last_name!
+      expect(directory_with_users.users[0]).to eq user3
+      expect(directory_with_users.users[1]).to eq user2
+      expect(directory_with_users.users[2]).to eq user1
     end
   end
 
