@@ -4,4 +4,14 @@ module ApplicationHelper
     date.strftime("%-m/%-d/%Y")
   end
 
+  def find_delimiter(line)
+    if line.include?(",")
+      ", "
+    elsif line.include?("|")
+      " | "
+    else
+      " "
+    end
+  end
+
 end

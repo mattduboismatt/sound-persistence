@@ -11,4 +11,22 @@ describe ApplicationHelper do
       expect(formatted_date(Date.parse('2005-06-27'))).to eq "6/27/2005"
     end
   end
+
+  describe '#find_delimiter' do
+    context 'with arg including commas' do
+      it 'returns the delimiter' do
+        expect(find_delimiter("one, two, three")).to eq ", "
+      end
+    end
+    context 'with arg including pipes' do
+      it 'returns the delimiter' do
+        expect(find_delimiter("one | two | three")).to eq " | "
+      end
+    end
+    context 'with arg not including commas or pipes' do
+      it 'returns the space delimiter' do
+        expect(find_delimiter("one two three")).to eq " "
+      end
+    end
+  end
 end
