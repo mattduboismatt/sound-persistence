@@ -5,4 +5,4 @@ Dir['./views/*.rb'].each {|file| require file }
 require 'date'
 
 c = Controller.new
-c.run
+c.run(ARGV[0])
