@@ -4,3 +4,4 @@ gem 'faker'
 gem 'pry'
 gem 'strftime'
 gem 'simplecov', require: false
+gem 'grape'
