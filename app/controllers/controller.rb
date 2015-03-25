@@ -17,7 +17,6 @@ class Controller
       file_parser = FileParser.new(input_dir+file)
       file_parser.add_records_to_directory(@directory)
     end
-    output
   end
 
   def output
