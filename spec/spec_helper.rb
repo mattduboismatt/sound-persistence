@@ -1,6 +1,3 @@
 require 'simplecov'
 SimpleCov.start
-Dir['./helpers/*.rb'].each {|file| require file }
-Dir['./models/*.rb'].each {|file| require file }
-Dir['./views/*.rb'].each {|file| require file }
-require 'date'
+require_relative '../config/environment.rb'

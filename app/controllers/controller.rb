@@ -1,5 +1,3 @@
-require 'pry'
-
 class Controller
 
   attr_reader :directory

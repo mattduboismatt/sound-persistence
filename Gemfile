@@ -4,6 +4,7 @@ gem 'capybara'
 gem 'faker'
 gem 'grape'
 gem 'pry'
+gem 'require_relative'
 gem 'rspec'
 gem 'shotgun'
 gem 'simplecov', require: false
