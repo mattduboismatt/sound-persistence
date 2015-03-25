@@ -13,22 +13,17 @@ class DirectoryEntity < Grape::Entity
   expose :users, using: UserEntity
 end
 
-
 module SoundPersistence
   class API < Grape::API
     format :json
     prefix :records
 
-    c = Controller.new
-    c.seed($seed_directory)
-    directory = c.directory
-
     helpers do
       def directory
-        @controller.directory
+        controller.directory
       end
       def controller
-        @controller ||= new_controller
+        controller ||= new_controller
       end
       def new_controller
         controller = Controller.new

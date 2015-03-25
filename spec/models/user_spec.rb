@@ -15,7 +15,7 @@ describe User do
       expect(user.last_name).to eq 'Bbb'
       expect(user.gender).to eq 'Male'
       expect(user.favorite_color).to eq 'Red'
-      expect(user.date_of_birth).to eq Date.parse('2001-01-01')
+      expect(user.date_of_birth).to eq '1/1/2001'
     end
   end
 

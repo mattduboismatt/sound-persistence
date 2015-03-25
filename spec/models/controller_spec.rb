@@ -36,10 +36,6 @@ describe Controller do
         controller.seed('spec/spec_lib/')
         expect(controller.directory.users.count).to eq 6
       end
-      it 'calls output method' do
-        expect(controller).to receive(:output)
-        controller.seed('spec/spec_lib/')
-      end
     end
   end
 
