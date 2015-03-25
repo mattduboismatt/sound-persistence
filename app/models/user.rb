@@ -9,11 +9,11 @@ class User
     @last_name = user_params.fetch(:last_name,nil)
     @gender = user_params.fetch(:gender,nil)
     @favorite_color = user_params.fetch(:favorite_color,nil)
-    @date_of_birth = user_params.fetch(:date_of_birth,nil)
+    @date_of_birth = formatted_date(user_params.fetch(:date_of_birth,nil))
   end
 
   def render
-    "#{@last_name} #{@first_name} #{@gender} #{@favorite_color} #{formatted_date(@date_of_birth)}"
+    "#{@last_name} #{@first_name} #{@gender} #{@favorite_color} #{@date_of_birth}"
   end
 
 end

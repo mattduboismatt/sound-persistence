@@ -1,6 +1,7 @@
 require 'pathname'
 require 'date'
 require 'grape'
+require 'grape-entity'
 
 $seed_directory = 'lib/'
 
