@@ -1,7 +1,13 @@
 source 'https://rubygems.org'
 ruby '2.0.0'
+gem 'capybara'
 gem 'faker'
-gem 'pry'
-gem 'strftime'
-gem 'simplecov', require: false
 gem 'grape'
+gem 'pry'
+gem 'rspec'
+gem 'shotgun'
+gem 'simplecov', require: false
+gem 'sinatra'
+gem 'sinatra-contrib'
+gem 'strftime'
+gem 'thin'
