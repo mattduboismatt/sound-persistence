@@ -11,34 +11,34 @@ describe Controller do
     end
   end
 
-  describe '#run' do
+  describe '#seed' do
 
     context 'with nil passed as argument' do
       it 'raises ArgumentError' do
-        expect{controller.run(nil)}.to raise_error(ArgumentError, 'Argument must be a directory.')
+        expect{controller.seed(nil)}.to raise_error(ArgumentError, 'Argument must be a directory.')
       end
     end
 
     context 'with invalid directory passed as argument' do
       it 'raises ArgumentError' do
-        expect{controller.run('example/')}.to raise_error(ArgumentError,"Argument must be a directory.")
+        expect{controller.seed('example/')}.to raise_error(ArgumentError,"Argument must be a directory.")
       end
     end
 
     context 'with empty directory passed as argument' do
       it 'raises ArgumentError' do
-        expect{controller.run('spec/empty/')}.to raise_error(ArgumentError, "Directory is empty.")
+        expect{controller.seed('spec/empty/')}.to raise_error(ArgumentError, "Directory is empty.")
       end
     end
 
     context 'with non-empty directory passed as argument' do
       it 'adds users to directory from all files' do
-        controller.run('spec/spec_lib/')
+        controller.seed('spec/spec_lib/')
         expect(controller.directory.users.count).to eq 6
       end
       it 'calls output method' do
         expect(controller).to receive(:output)
-        controller.run('spec/spec_lib/')
+        controller.seed('spec/spec_lib/')
       end
     end
   end

@@ -2,5 +2,5 @@
 require './config/environment.rb'
 
 c = Controller.new
-c.run(ARGV[0])
+c.seed(ARGV[0])
 # c.output

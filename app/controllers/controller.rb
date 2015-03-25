@@ -6,7 +6,7 @@ class Controller
     @directory = Directory.new
   end
 
-  def run(input_dir)
+  def seed(input_dir)
     if input_dir.nil? || !Dir.exists?(input_dir)
       raise ArgumentError, "Argument must be a directory."
     end
