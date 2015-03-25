@@ -4,7 +4,7 @@ module SoundPersistence
     prefix :records
 
     c = Controller.new
-    c.seed('lib/')
+    c.seed($seed_directory)
     directory = c.directory
 
     desc "Create a record."
@@ -15,12 +15,13 @@ module SoundPersistence
       line_parser = LineParser.new(params[:record])
       user = User.new(line_parser.user_params)
       directory.add_user(user)
+      return "Added record.\n"
     end
 
     desc "Output 1 – sorted by gender, then last name ascending"
     get :gender do
       directory.sort_by_gender!
-      present directory
+      return directory.inspect
     end
 
     desc "Output 2 – sorted by birth date, ascending"

@@ -2,5 +2,5 @@
 require './config/environment.rb'
 
 c = Controller.new
-c.seed(ARGV[0])
-# c.output
+c.seed($seed_directory)
+c.output
