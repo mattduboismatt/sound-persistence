@@ -39,13 +39,13 @@ describe Controller do
     end
   end
 
-  describe '#output' do
+  describe '#output_to_console' do
     it 'renders all 3 outputs with headers and breaks' do
       output_break = "-"*60+"\n"
       one = output_break+"Output 1 – sorted by gender, then last name ascending\n\n"
       two = output_break+"Output 2 – sorted by birth date, ascending\n\n"
       three = output_break+"Output 3 – sorted by last name, descending\n\n"
-      expect{ controller.output }.to output(one+two+three).to_stdout
+      expect{ controller.output_to_console }.to output(one+two+three).to_stdout
     end
   end
 end

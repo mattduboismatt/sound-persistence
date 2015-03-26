@@ -1,7 +1,4 @@
 class UserEntity < Grape::Entity
-
-  include ApplicationHelper
-
   expose :last_name
   expose :first_name
   expose :gender

@@ -3,4 +3,4 @@ require './config/environment.rb'
 
 c = Controller.new
 c.seed($seed_directory)
-c.output
+c.output_to_console

@@ -19,7 +19,7 @@ class Controller
     end
   end
 
-  def output
+  def output_to_console
     puts "-"*60
     puts "Output 1 – sorted by gender, then last name ascending"
     @directory.sort_by_gender!
