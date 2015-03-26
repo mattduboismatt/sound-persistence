@@ -25,7 +25,7 @@ module SoundPersistence
       line_parser = LineParser.new(params[:record])
       user = User.new(line_parser.user_params)
       directory.add_user(user)
-      return "Added record.\n"
+      return "Added the record."
     end
 
     desc "Output 1 – sorted by gender, then last name ascending"
