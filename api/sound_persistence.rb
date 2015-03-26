@@ -15,19 +15,7 @@ module SoundPersistence
     format :json
     prefix :records
 
-    helpers do
-      def directory
-        controller.directory
-      end
-      def controller
-        controller ||= new_controller
-      end
-      def new_controller
-        controller = Controller.new
-        controller.seed($seed_directory)
-        controller
-      end
-    end
+    directory = $controller.directory
 
     desc "Create a record."
     params do
