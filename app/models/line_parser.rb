@@ -11,6 +11,7 @@ class LineParser
   def user_params
     delimiter = find_delimiter(@line)
     args = @line.split(delimiter)
+    raise ArgumentError, "A user record requires exactly 5 arguments." if args.length != 5
     user_params = {
       last_name: args[0],
       first_name: args[1],
