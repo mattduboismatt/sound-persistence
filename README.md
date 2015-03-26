@@ -11,7 +11,7 @@ http://reverb.com/page/dev-challenge
 
 > rackup config.ru
 
-#####To make api requests to server, use following 6 templates:
+#####To make API requests to server, use following 6 templates:
 
 * Add new record with comma delimiter
 
