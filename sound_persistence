@@ -1,6 +1,6 @@
 #!/usr/bin/env ruby
 require './config/environment.rb'
 
-c = Controller.new
-c.seed($seed_directory)
-c.output_to_console
+controller = Controller.new
+controller.seed($seed_directory)
+controller.output_to_console

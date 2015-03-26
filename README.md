@@ -1,37 +1,38 @@
-Reverb Exercise
+###Reverb Exercise
 http://reverb.com/page/dev-challenge
 
-Instructions:
-1) Run command line program and see user records printed to console
+##Instructions:
 
-  $> sound_persistence
+#To run program from command line with user records printed to console:
 
-2) Run rackup server
+> sound_persistence
 
-  $> rackup config.ru
+#To run rackup server to access API:
 
-To make api requests to server, use following 6 templates:
+'rackup config.ru'
 
-#1a) Add new record with comma delimiter
+#To make api requests to server, use following 6 templates:
+
+*Add new record with comma delimiter
 
   curl -i --data record="Jones, Mike, Male, Red, 1980-01-01" "localhost:9292/records"
 
-#1b) Add new record with pipe delimeter
+*Add new record with pipe delimeter
 
   curl -i --data record="Jones | Mike | Male | Red | 1980-01-01" "localhost:9292/records"
 
-#1c) Add new record with space delimeter
+*Add new record with space delimeter
 
   curl -i --data record="Jones Mike Male Red 1980-01-01" "localhost:9292/records"
 
-#2a) Output 1 – sorted by gender, then last name ascending
+*Output 1 – sorted by gender, then last name ascending
 
   curl -i -H "Accept: application/json" "localhost:9292/records/gender"
 
-#2b) Output 2 – sorted by birth date, ascending
+*Output 2 – sorted by birth date, ascending
 
   curl -i -H "Accept: application/json" "localhost:9292/records/birthdate"
 
-#2b) Output 3 – sorted by last name, descending
+*Output 3 – sorted by last name, descending
 
   curl -i -H "Accept: application/json" "localhost:9292/records/name"
