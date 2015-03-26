@@ -1,6 +1,8 @@
-# run script to write 20 records into 3 lib/ files
+# run script to write records into 3 lib/ files
 require 'faker'
 require 'pry'
+
+RECORDS_PER_FILE = 20
 
 GENDERS = ["Male","Female"]
 
@@ -21,7 +23,7 @@ end
 
 def make_doc(delimiter)
   doc = ""
-  20.times do
+  RECORDS_PER_FILE.times do
     record = make_record(delimiter)
     doc << record
   end
